@@ -1,0 +1,124 @@
+import random
+player1HP = 150
+player2HP = 150
+
+def attackp1(minrandom, maxrandom):
+  global player2HP
+  if qop1 == 1:
+    pa1 = input("what is " + str(q1p1) + " + " + str(q2p1) + "?\n")
+    a1 = q1p1 + q2p1
+    
+  else:
+    pa1 = input("what is " + str(q2p1) + " - " + str(q1p1) + "?\n")
+    a1 = q2p1 - q1p1
+    
+  print(a1)   
+  if str(pa1) == str(a1):
+    player2HP = player2HP - random.randint(minrandom, maxrandom)
+
+def attackp2(minrandom, maxrandom):
+  global player1HP
+  if qop2 == 1:
+    pa2 = input("what is " + str(q1p2) + " + " + str(q2p2) + "?\n")
+    a2 = q1p2 + q2p2
+    print(a2)
+  else:
+    pa2 = input("what is " + str(q2p2) + " - " + str(q1p2) + "?\n")
+    a2 = q2p2 - q1p2
+
+  print(a2)
+  if str(pa2) == str(a2):
+    player1HP = player1HP - random.randint(minrandom, maxrandom)
+
+print ("Creators of the game: Aadvik, Agastya, Ayaan, Dwithi")
+
+player1name = input("pick a name for player 1\n")
+player2name = input("pick a name for player 2\n")
+
+roundnumber = 1
+pa1 = 0
+a1 = 0
+while player1HP > 0 and player2HP > 0:
+ print("what attack would " + player1name + " use for round " + str(roundnumber) + "?")
+ p1attack = input("fireball(1), lightning strike(2), power of the gods(3), transformation(4) or tsunami(5)\n")
+  
+ if p1attack == "fireball" or p1attack == "1":
+  q1p1 = random.randint(1000, 2000)
+  q2p1 = random.randint(2000, 3500)
+  qop1 = random.randint(1, 2)
+  attackp1(10, 20)
+
+ if p1attack == "lightning strike" or p1attack == "2":
+  q1p1 = random.randint(1600, 2500)
+  q2p1 = random.randint(2500, 3900)
+  qop1 = random.randint(1, 2)
+  attackp1(20, 40)
+
+ if p1attack == "power of the gods" or p1attack == "3":
+  q1p1 = random.randint(1900, 3000)
+  q2p1 = random.randint(3000, 5000)
+  qop1 = random.randint(1, 2)
+  attackp1(40, 80)
+
+ if p1attack == "transformation" or p1attack == "4":
+  q1p1 = random.randint(1000, 2000)
+  q2p1 = random.randint(2000, 3500)
+  qop1 = random.randint(1, 2)
+  attackp1(30, 60)
+
+ if p1attack == "tsunami" or p1attack == "5":
+  q1p1 = random.randint(1200, 2300)
+  q2p1 = random.randint(2300, 3800)
+  qop1 = random.randint(1, 2)
+  attackp1(20, 30)
+ print("")
+ print(player2name)
+ print("has")
+ print(player2HP)
+ print("HP")
+ print("")
+ print("what attack would " + player2name + " use for round " + 
+ str(roundnumber) + "?")
+ p2attack = input("fireball(1), lightning strike(2), power of the gods(3), transformation(4) or tsunami(5)\n")
+
+ if p2attack == "fireball" or p2attack == "1":
+    q1p2 = random.randint(300, 600)
+    q2p2 = random.randint(600, 900)
+    qop2 = random.randint(1, 2)
+    attackp2(10, 20)
+
+ if p2attack == "lightning strike" or p2attack == "2":
+    q1p2 = random.randint(500, 900)
+    q2p2 = random.randint(900, 1400)
+    qop2 = random.randint(1, 2)
+    attackp2(20, 40)
+
+ if p2attack == "power of the gods" or p2attack == "3":
+    q1p2 = random.randint(750, 1000)
+    q2p2 = random.randint(1000, 1500)
+    qop2 = random.randint(1, 2)
+    attackp2(40, 80)
+
+ if p2attack == "transformation" or p2attack == "4":
+    q1p2 = random.randint(500, 800)
+    q2p2 = random.randint(800, 1100)
+    qop2 = random.randint(1, 2)
+    attackp2(30, 60)
+
+ if p2attack == "tsunami" or p2attack == "5":
+    q1p2 = random.randint(200, 600)
+    q2p2 = random.randint(600, 800)
+    qop2 = random.randint(1, 2)
+    attackp2(20, 30)
+ print("")
+ print(player1name)
+ print("has")
+ print(player1HP)
+ print("HP")
+ print("")
+ roundnumber = roundnumber + 1
+  
+if player1HP > 0:
+  print(player1name + " has won the game")
+else:
+  print(player2name + " has won the game")

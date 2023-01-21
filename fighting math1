@@ -1,0 +1,79 @@
+import random
+
+print("Creators of the game: Aadvik, Agastya, Ayaan, Dwithi")
+player1name = input("what is player 1's name?")
+player2name = input("what is player 2's name?")
+Player1HP = 150
+Player2HP = 150
+
+print(player1name)
+print("May attack")
+while Player1HP > 0 and Player2HP > 0:
+  Attack = input(
+    "what attack would you use for round one? fire ball(1), lightning strike(2), power of the gods(3), transformation(4) or tsunami(5)."
+  )
+  if Attack == "fireball":
+    Player2HP = Player2HP - random.randint(10, 100)
+    print(player2name)
+    print("has")
+    print(Player2HP)
+
+  if Attack == "lightning strike":
+    Player2HP = Player2HP - random.randint(10, 100)
+    print(player2name)
+    print("has")
+    print(Player2HP)
+
+  if Attack == "power of the gods":
+    Player2HP = Player2HP - random.randint(40, 100)
+    print(player2name)
+    print("has")
+    print(Player2HP)
+
+  if Attack == "transformation":
+    Player2HP = Player2HP - random.randint(10, 100)
+    print(player2name)
+    print("has")
+    print(Player2HP)
+
+  if Attack == "tsunami":
+    Player2HP = Player2HP - random.randint(10, 100)
+    print(player2name)
+    print("has")
+    print(Player2HP)
+
+  print(player2name)
+  print("May attack")
+  Attack = input(
+    "what attack would you use for round one? fire ball(1), lightning strike(2), power of the gods(3), transformation(4) or tsunami(5)."
+  )
+
+  if Attack == "fireball":
+    Player1HP = Player1HP - random.randint(10, 100)
+    print(player1name)
+    print("has")
+    print(Player1HP)
+
+  if Attack == "lightnin strike":
+    Player1HP = Player1HP - random.randint(10, 100)
+    print(player1name)
+    print("has")
+    print(Player1HP)
+
+  if Attack == "power of the gods":
+    Player1HP = Player1HP - random.randint(40, 100)
+    print(player1name)
+    print("has")
+    print(Player1HP)
+
+  if Attack == "transformation":
+    Player1HP = Player1HP - random.randint(10, 100)
+    print(player1name)
+    print("has")
+    print(Player1HP)
+
+  if Attack == "tsunami":
+    Player1HP = Player1HP - random.randint(10, 100)
+    print(player1name)
+    print("has")
+    print(Player1HP)
